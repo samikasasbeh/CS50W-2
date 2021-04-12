@@ -3,16 +3,26 @@
 {% block body %}
 
 <h2>Active Listings</h2>
-
+{% for list in Listings %}
+<div class="listing">
+    <div class="image"></div>
+    <div class="content"> 
+        <h2>{{ list.title }}</h2>
+        <p>
+            Starting bid: ${{ list.starting_bid }}<br>
+            Current bid: ${{ list.current_bid }}<br>
+            Category: {{ list.category }}<br>
+            Created on: {{ list.created_date }}
+        </p>
+    </div>
+{% empty %}
 <ul>
-    {% for list in Listings %}
-
-    <li>{{ list }}</li>
-    {% empty %}
-
-    <li>No listings right now.</li>
-    {% endfor %}
+    <li>No listings currently displayed</li>
 </ul>
+{% endfor %}
+
+
+</div>
 
 
 {% endblock %}
