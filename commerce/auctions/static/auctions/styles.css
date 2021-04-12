@@ -1,3 +1,21 @@
 body {
     padding: 10px;
 }
+.listing{
+    font-size: 10px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.image{
+    display: inline-block;
+    width: 15%;
+    height: 100px;
+    border: 1px solid gray;
+}
+.content{
+    display: inline-block;
+    width: 83%;
+    border: 1px solid gray;
+    padding: 10px;
+}
