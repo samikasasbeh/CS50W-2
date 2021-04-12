@@ -24,3 +24,8 @@ class List(models.Model):
     def __str__(self):
         return f"{self.title} : starting ${self.starting_bid}"
 
+class Picture(models.Model):
+    listing = models.ForeignKey(List, on_delete=models.CASCADE, related_name='listing')
+    image = models.ImageField(upload_to='images/')
+    alt_text = models.CharField(max_length=64)
+

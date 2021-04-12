@@ -5,7 +5,11 @@
 <h2>Active Listings</h2>
 {% for list in Listings %}
 <div class="listing">
-    <div class="image"></div>
+    <div class="image">
+        {% for picture in Picture %}
+        <img src= { picture } alt={{ picture.alt_text }}>
+        {% endfor %}
+    </div>
     <div class="content"> 
         <h2>{{ list.title }}</h2>
         <p>
