@@ -1,22 +1,27 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils import timezone
 
 
 class User(AbstractUser):
     pass
 
-
-class Lists(models.Model):
-    title = models.CharField(max_length=64)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=6,decimal_places=2)
+class Category(models.Model):
+    category = models.CharField(max_length=30)
 
     def __str__(self):
-        return f'{self.title}: Starting price {self.price} '
+        return f'{self.category}'
 
-class Bids(models.Model):
-    pass
+class List(models.Model):
+    title = models.CharField(max_length=64)
+    created_date = models.DateTimeField(default= timezone.now)
+    description = models.TextField()
+    starting_bid= models.FloatField()
+    current_bid = models.FloatField(blank= True, null=True)
+    category = models.ForeignKey(Category, on_delete= models.CASCADE, related_name="Category")
+    creator = models.ForeignKey(User, on_delete= models.PROTECT, related_name="Creator_lists")
 
-class Comments(models.Model):
-    pass
+    def __str__(self):
+        return f"{self.title} : starting ${self.starting_bid}"
 
+    
