@@ -13,6 +13,10 @@ body {
     height: 100px;
     border: 1px solid gray;
 }
+.liimage {
+    display: flex;
+    size: 100%;
+}
 .content{
     display: inline-block;
     width: 83%;
