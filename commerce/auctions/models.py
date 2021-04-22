@@ -29,7 +29,7 @@ class List(models.Model):
         img = Image.open(self.image.path)
 
         if img.height > 300 :
-            output_size = (200,200)
+            output_size = (126.03,100)
             img.thumbnail(output_size)
             img.save(self.image.path)
 
