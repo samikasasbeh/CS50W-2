@@ -1,16 +1,12 @@
 {% extends "auctions/layout.html" %}
+{% load static %}
 
 {% block body %}
 
 <h2>Active Listings</h2>
 {% for list in Listings %}
 <div class="listing">
-    <div class="image">
-        {% if list.image %}
-        <img style="width: 100%; height: 100%;" src="{{list.image}}" alt="">
-        {% endif %}
-        
-    </div>
+    
     <div class="content"> 
         <h2>{{ list.title }}</h2>
         <p>
@@ -19,6 +15,12 @@
             Category: {{ list.category }}<br>
             Created on: {{ list.created_date }}
         </p>
+        <div class="image">
+            {% if list.image %}
+            <img style="width: 100%; height: 100%;" src="{{list.image}}" alt="">
+            {% endif %}
+            
+        </div>
     </div>
 {% empty %}
 <ul>

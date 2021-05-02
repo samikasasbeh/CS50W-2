@@ -1,25 +1,30 @@
 body {
     padding: 10px;
+    background-color: grey;
+    
 }
 .listing{
     font-size: 10px;
     text-align: left;
-    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 30px 0;
+    display: flexbox;
+
 }
 
 .image{
-    display: inline-block;
-    width: 15%;
-   
+    
+    width: 100px;
     border: 1px solid gray;
+    display: inline-block;
+    height: 100%;
+    bottom: 25%;
+
 }
-.liimage {
-    display: flex;
-    size: 100%;
-}
+
 .content{
     display: inline-block;
-    width: 83%;
+    width: 50%;
     border: 1px solid gray;
     padding: 10px;
 }
