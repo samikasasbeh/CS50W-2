@@ -1,6 +1,6 @@
 body {
     padding: 10px;
-    background-color: grey;
+    
     
 }
 .listing{
@@ -13,17 +13,18 @@ body {
 }
 
 .image{
-    
+    margin-left: 82%;
     width: 100px;
     border: 1px solid gray;
-    display: inline-block;
+    display: block;
     height: 100%;
     bottom: 25%;
+    border-radius: 10px;
 
 }
 
 .content{
-    display: inline-block;
+    display: block;
     width: 50%;
     border: 1px solid gray;
     padding: 10px;
