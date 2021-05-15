@@ -13,7 +13,7 @@ body {
 }
 
 .image{
-    margin-left: 82%;
+    margin-left: 0;
     width: 100px;
     border: 1px solid gray;
     display: block;
@@ -25,7 +25,8 @@ body {
 
 .content{
     display: block;
-    width: 50%;
+    width: 75%;
     border: 1px solid gray;
     padding: 10px;
 }
+
